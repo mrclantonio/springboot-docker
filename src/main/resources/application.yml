@@ -5,6 +5,8 @@ server:
 server.servlet-path: /
 # Jersey dispatcher servlet
 spring.jersey.application-path: /api
+# Jersey
+spring.jersey.type: servlet
 
 # http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready-endpoints
 # http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-use-actuator-with-jersey

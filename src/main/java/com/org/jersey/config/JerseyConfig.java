@@ -5,7 +5,8 @@ import javax.annotation.PostConstruct;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.wadl.internal.WadlResource;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
+//import org.springframework.stereotype.Component;
 
 import com.org.jersey.rest.v1.HelloResource;
 
@@ -13,7 +14,8 @@ import io.swagger.jaxrs.config.BeanConfig;
 import io.swagger.jaxrs.listing.ApiListingResource;
 import io.swagger.jaxrs.listing.SwaggerSerializers;
 
-@Component
+//@Component
+@Configuration
 public class JerseyConfig extends ResourceConfig {
 	
 	
@@ -24,6 +26,7 @@ public class JerseyConfig extends ResourceConfig {
   public JerseyConfig() {
      // Register endpoints, providers, ...
      this.registerEndpoints();
+     
    }
  
   private void registerEndpoints() {

@@ -15,3 +15,17 @@ Jump Starter for a project with Spring boot, Jersey, Swagger and docker
 ```shell
 ./mvnm docker:build
 ```
+
+## Run container
+
+Create and start an container
+
+```shell
+./mvnm docker:start
+```
+
+Strop and remove container
+
+```shell
+./mvnm docker:stop
+```

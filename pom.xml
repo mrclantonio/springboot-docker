@@ -28,7 +28,6 @@
 		<docker.image.prefix>jerseypoc</docker.image.prefix>
 		<push.image>false</push.image>
 		<maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
-		<docker-maven-plugin-spotify.version>0.4.10</docker-maven-plugin-spotify.version>
 	</properties>
 
 	<dependencies>
@@ -82,35 +81,6 @@
 					</compilerArguments>
 				</configuration>
 			</plugin>
-			<!-- <plugin> <groupId>com.spotify</groupId> <artifactId>docker-maven-plugin</artifactId> 
-				<version>${docker-maven-plugin-spotify.version}</version> -->
-			<!-- Include: export DOCKER_HOST=tcp://docker:4243 in host executing mvn 
-				docker:build -->
-			<!-- <configuration> -->
-			<!-- One or the other -->
-			<!-- First add server entry in settings.xml -->
-			<!-- <serverId>docker-hub</serverId> -->
-			<!-- Uses ~/.docker/config.json created once logged in using "docker login" 
-				command -->
-			<!-- <useConfigFile>true</useConfigFile> -->
-
-			<!-- <imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName> -->
-			<!-- <pushImage>${push.image}</pushImage> -->
-			<!-- <forceTags>true</forceTags> -->
-			<!-- <imageTags> -->
-			<!-- <imageTag>${project.version}</imageTag> -->
-			<!-- <imageTag>latest</imageTag> -->
-			<!-- </imageTags> -->
-			<!-- <dockerDirectory>src/main/docker</dockerDirectory> -->
-			<!-- <resources> -->
-			<!-- <resource> -->
-			<!-- <targetPath>/</targetPath> -->
-			<!-- <directory>${project.build.directory}</directory> -->
-			<!-- <include>${project.build.finalName}.jar</include> -->
-			<!-- </resource> -->
-			<!-- </resources> -->
-			<!-- </configuration> -->
-			<!-- </plugin> -->
 
 			<plugin>
 				<groupId>io.fabric8</groupId>
@@ -119,8 +89,7 @@
 				<configuration>
 					<images>
 						<image>
-							<name>marceloalvesobjetivait:jerseyexample</name>
-							l
+							<name>marceloalvesobjetivait/jerseyexample:${project.version}</name>
 							<alias>dockerfile</alias>
 							<build>
 								<!-- filter>@</filter -->
